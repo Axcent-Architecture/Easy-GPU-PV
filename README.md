@@ -12,6 +12,7 @@ Easy-GPU-PV does the following...
 
 ### Prerequisites:
 * Windows 10 20H1+ Pro, Enterprise or Education OR Windows 11 Pro, Enterprise or Education.  Windows 11 on host and VM is preferred due to better compatibility.  
+  * _(see https://www.youtube.com/watch?v=-linHCoAE5w&ab_channel=Pureinfotech for downloading ISO w/o the Media Creation Tool)
 * Matched Windows versions between the host and VM. Mismatches may cause compatibility issues, blue-screens, or other issues. (Win10 21H1 + Win10 21H1, or Win11 21H2 + Win11 21H2, for example)  
 * Desktop Computer with dedicated NVIDIA/AMD GPU or Integrated Intel GPU - Laptops with NVIDIA GPUs are not supported at this time, but Intel integrated GPUs work on laptops.  GPU must support hardware video encoding (NVIDIA NVENC, Intel Quicksync or AMD AMF).  
 * Latest GPU driver from Intel.com or NVIDIA.com, don't rely on Device manager or Windows update.  

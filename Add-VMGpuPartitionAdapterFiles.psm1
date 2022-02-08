@@ -1,8 +1,9 @@
-﻿Function Add-VMGpuPartitionAdapterFiles {
+﻿# import-module -Force .\Add-VMGpuPartitionAdapterFiles_2.psm1; Add-VMGpuPartitionAdapterFiles.
+Function Add-VMGpuPartitionAdapterFiles {
 param(
 [string]$hostname = $ENV:COMPUTERNAME,
-[string]$DriveLetter,
-[string]$GPUName
+[string]$DriveLetter = "$HOME\Downloads\amd-backup-drivers\$(Get-Date -Format "yyyy-MM-ddThh-mm-ss")",
+[string]$GPUName = "AUTO"
 )
 
 If (!($DriveLetter -like "*:*")) {

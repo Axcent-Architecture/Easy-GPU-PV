@@ -1,21 +1,21 @@
 ﻿$params = @{
-    VMName = "GPUPV"
-    SourcePath = "C:\Users\james\Downloads\Win11_English_x64.iso"
+    VMName = "Istation2"
+    SourcePath = "C:\Users\Michael-Tarleton\Downloads\Win10_21H2_English_x64.iso"
     Edition    = 6
     VhdFormat  = "VHDX"
     DiskLayout = "UEFI"
-    SizeBytes  = 40GB
-    MemoryAmount = 8GB
-    CPUCores = 4
-    NetworkSwitch = "Default Switch"
+    SizeBytes  = 250GB
+    MemoryAmount = 32GB
+    CPUCores = 16
+    NetworkSwitch = "External"
     VHDPath = "C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks\"
     UnattendPath = "$PSScriptRoot"+"\autounattend.xml"
     GPUName = "AUTO"
     GPUResourceAllocationPercentage = 50
     Team_ID = ""
     Key = ""
-    Username = "GPUVM"
-    Password = "CoolestPassword!"
+    Username = "MichaelTarleton"
+    Password = "^4JehovahJireh$"
     Autologon = "true"
 }
 
@@ -164,9 +164,9 @@ param(
     if((Test-Path -Path $DriveLetter\Windows\system32\GroupPolicy\Machine\Scripts\Startup) -eq $true) {} Else {New-Item -Path $DriveLetter\Windows\system32\GroupPolicy\Machine\Scripts\Startup -ItemType directory | Out-Null}
     if((Test-Path -Path $DriveLetter\Windows\system32\GroupPolicy\Machine\Scripts\Shutdown) -eq $true) {} Else {New-Item -Path $DriveLetter\Windows\system32\GroupPolicy\Machine\Scripts\Shutdown -ItemType directory | Out-Null}
     if((Test-Path -Path $DriveLetter\ProgramData\Easy-GPU-P) -eq $true) {} Else {New-Item -Path $DriveLetter\ProgramData\Easy-GPU-P -ItemType directory | Out-Null}
-    Copy-Item -Path $psscriptroot\VMScripts\VDDMonitor.ps1 -Destination $DriveLetter\ProgramData\Easy-GPU-P
+    #Copy-Item -Path $psscriptroot\VMScripts\VDDMonitor.ps1 -Destination $DriveLetter\ProgramData\Easy-GPU-P
     Copy-Item -Path $psscriptroot\VMScripts\VBCableInstall.ps1 -Destination $DriveLetter\ProgramData\Easy-GPU-P
-    Copy-Item -Path $psscriptroot\VMScripts\ParsecVDDInstall.ps1 -Destination $DriveLetter\ProgramData\Easy-GPU-P
+    #Copy-Item -Path $psscriptroot\VMScripts\ParsecVDDInstall.ps1 -Destination $DriveLetter\ProgramData\Easy-GPU-P
     Copy-Item -Path $psscriptroot\VMScripts\ParsecPublic.cer -Destination $DriveLetter\ProgramData\Easy-GPU-P
     Copy-Item -Path $psscriptroot\VMScripts\Parsec.lnk -Destination $DriveLetter\ProgramData\Easy-GPU-P
     Copy-Item -Path $psscriptroot\gpt.ini -Destination $DriveLetter\Windows\system32\GroupPolicy
